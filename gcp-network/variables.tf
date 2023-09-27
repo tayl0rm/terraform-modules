@@ -4,21 +4,25 @@ variable "name" {
 }
 
 variable "firewall_protocol" {
+  default     = null
   type        = string
   description = "Protocol to added to the allow firewall rule."
 }
 
 variable "firewall_ports" {
+  default     = null
   type        = list(string)
   description = "Port(s) to added to the allow firewall rule."
 }
 
 variable "firewall_source_tag" {
+  default     = null
   type        = list(string)
   description = "Source Tag(s) which pair the firewall rule with other GCP resources, i.e. GCE Instance."
 }
 
 variable "firewall_source_ranges" {
+  default     = null
   type        = list(string)
   description = "IP addresses added to the allow firewall rule."
 }
