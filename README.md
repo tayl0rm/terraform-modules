@@ -1,2 +1,3 @@
-# terraform-modules
-A repository to house my Terraform modules.
+<!-- BEGIN_TF_DOCS -->
+
+<!-- END_TF_DOCS -->
