@@ -29,10 +29,10 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_auto_create_subnetworks"></a> [auto\_create\_subnetworks](#input\_auto\_create\_subnetworks) | When enabled, subnetworks will automatically be created for the VPC. | `bool` | `false` | no |
 | <a name="input_create_firewall"></a> [create\_firewall](#input\_create\_firewall) | When enabled, create a firewall alongside other gcp-network resources. | `bool` | `false` | no |
-| <a name="input_firewall_ports"></a> [firewall\_ports](#input\_firewall\_ports) | Port(s) to added to the allow firewall rule. | `list(string)` | n/a | yes |
-| <a name="input_firewall_protocol"></a> [firewall\_protocol](#input\_firewall\_protocol) | Protocol to added to the allow firewall rule. | `string` | n/a | yes |
-| <a name="input_firewall_source_ranges"></a> [firewall\_source\_ranges](#input\_firewall\_source\_ranges) | IP addresses added to the allow firewall rule. | `list(string)` | n/a | yes |
-| <a name="input_firewall_source_tag"></a> [firewall\_source\_tag](#input\_firewall\_source\_tag) | Source Tag(s) which pair the firewall rule with other GCP resources, i.e. GCE Instance. | `list(string)` | n/a | yes |
+| <a name="input_firewall_ports"></a> [firewall\_ports](#input\_firewall\_ports) | Port(s) to added to the allow firewall rule. | `list(string)` | `null` | no |
+| <a name="input_firewall_protocol"></a> [firewall\_protocol](#input\_firewall\_protocol) | Protocol to added to the allow firewall rule. | `string` | `null` | no |
+| <a name="input_firewall_source_ranges"></a> [firewall\_source\_ranges](#input\_firewall\_source\_ranges) | IP addresses added to the allow firewall rule. | `list(string)` | `null` | no |
+| <a name="input_firewall_source_tag"></a> [firewall\_source\_tag](#input\_firewall\_source\_tag) | Source Tag(s) which pair the firewall rule with other GCP resources, i.e. GCE Instance. | `list(string)` | `null` | no |
 | <a name="input_gcp_project"></a> [gcp\_project](#input\_gcp\_project) | Default GCP Project to deploy all resources into. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Generic name for resources dedicated to the gcp-network. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | Default GCP region for the gcp-network resources. | `string` | `"europe-west1"` | no |
