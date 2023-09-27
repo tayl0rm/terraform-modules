@@ -1,25 +1,4 @@
-<!-- BEGIN_TF_DOCS -->
-## Requirements
+# Terraform Modules
 
-No requirements.
-
-## Providers
-
-No providers.
-
-## Modules
-
-No modules.
-
-## Resources
-
-No resources.
-
-## Inputs
-
-No inputs.
-
-## Outputs
-
-No outputs.
-<!-- END_TF_DOCS -->
+## GCE Instance
+A standard deployment for a Google Compute Engine Instance, with the supporting resources of a Firewall Rule, a Service Account and an IP address
