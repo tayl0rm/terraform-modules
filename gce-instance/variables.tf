@@ -4,8 +4,8 @@ variable "gcp_project" {
 }
 
 variable "name" {
-  description = "Generic name for resources dedicated to the instance."
   type        = string
+  description = "Generic name for resources dedicated to the instance."
 }
 
 variable "ip_address_type" {
