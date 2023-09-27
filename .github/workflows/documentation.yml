@@ -5,6 +5,8 @@ on:
       - main
     paths:
       - gce-instance/**
+      - gcs-bucket/**
+      - gcp-network/**
 
 jobs:
   docs:
