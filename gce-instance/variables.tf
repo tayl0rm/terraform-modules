@@ -20,6 +20,12 @@ variable "ip_address_purpose" {
   description = "Purpose of the IP address being created."
 }
 
+variable "machine_type" {
+  default     = "e2-standard-2"
+  type        = string
+  description = "The machine type that will be used when deploying the instance."
+}
+
 variable "region" {
   default     = "europe-west1"
   type        = string
@@ -54,7 +60,7 @@ variable "firewall_protocol" {
 }
 
 variable "firewall_port" {
-  type        = string
+  type        = list(string)
   description = "The port(s) which will be added to the firewall's allowed ports list."
 }
 
