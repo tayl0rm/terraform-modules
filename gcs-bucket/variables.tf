@@ -32,12 +32,6 @@ variable "enable_force_destroy" {
   description = "When enabled, Terraform will delete all contents of a bucket when terraform destroy is ran."
 }
 
-variable "enable_uniform_access" {
-  default = false
-  type = bool
-  description = "When enabled, Uniform Bucket-level Access will be used to access the bucket."
-}
-
 variable "enable_public_prevention" {
   default = false
   type = bool

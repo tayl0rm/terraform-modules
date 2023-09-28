@@ -4,7 +4,7 @@ resource "google_storage_bucket" "bucket" {
   location                    = var.location
   storage_class               = var.storage_class
   force_destroy               = var.enable_force_destroy
-  uniform_bucket_level_access = var.enable_uniform_access
+  uniform_bucket_level_access = var.enable_public_prevention == true ? true : false
   public_access_prevention    = var.enable_public_prevention
 
   dynamic "logging" {
