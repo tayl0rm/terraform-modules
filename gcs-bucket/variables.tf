@@ -33,9 +33,9 @@ variable "enable_force_destroy" {
 }
 
 variable "enable_public_prevention" {
-  default = false
-  type = bool
-  description = "When enabled, allow public access to a bucket."
+  default = "inherited"
+  type = string
+  description = "This can be inherited, enforced."
 }
 
 variable "enable_logging" {

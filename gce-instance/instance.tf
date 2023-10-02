@@ -6,7 +6,9 @@ resource "google_compute_address" "instance_ip" {
 
 resource "google_compute_instance" "server_instance" {
   depends_on = [
-    google_compute_address.instance_ip
+    google_compute_address.instance_ip,
+    google_service_account.service_account,
+    google_compute_firewall.firewall
   ]
 
   name         = "${var.name}-server"
