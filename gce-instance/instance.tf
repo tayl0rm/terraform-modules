@@ -21,6 +21,17 @@ resource "google_compute_instance" "server_instance" {
       image = var.compute_image
     }
   }
+  boot_disk {
+    initialize_params {
+      image = "cos-cloud/cos-stable-72-11316-171-0"
+    }
+  }
+
+  metadata {
+   google-logging-enabled="true"  
+   gce-container-declaration = "spec:\n  containers:\n    - name: ${var.name}\n      image: '${var.compute_image}'\n      stdin: false\n      tty: false\n  restartPolicy: Always\n"
+   startup_script = var.startup_script
+  }
 
   network_interface {
     network    = var.network
@@ -33,5 +44,4 @@ resource "google_compute_instance" "server_instance" {
     scopes = ["cloud-platform"]
   }
 
-  metadata_startup_script = var.startup_script
 }
